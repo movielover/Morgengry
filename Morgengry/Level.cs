@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    enum Level
+    public enum Level
     {
         low,
         medium,

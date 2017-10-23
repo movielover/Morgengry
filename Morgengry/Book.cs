@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    class Book
+    public class Book
     {
         public Book(string itemId, string title, double price)
         {
@@ -26,5 +26,9 @@ namespace Morgengry
         public string ItemId { get; set; }
         public string Title { get; set; }
         public double Price { get; set; }
+        public override string ToString()
+        {
+            return String.Format("ItemId: {0}, Title: {1}, Price: {2}", ItemId, Title, Price);
+        }
     }
 }
