@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    public class Amulet
+    public class Amulet:Merchandise
     {
-        public Amulet(string itemId, Level quality, string design)
+        public Amulet(string itemId, Level quality, string design):
+            base(itemId)
         {
             ItemId = itemId;
             Design = design;
@@ -22,7 +19,7 @@ namespace Morgengry
             this(itemId, Level.medium, "")
         {
         }
-        public string ItemId { get; set; }
+
         public string Design { get; set; }
         public Level Quality { get; set; }
         public override string ToString()

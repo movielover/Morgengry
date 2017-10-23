@@ -45,6 +45,7 @@
     <Compile Include="Amulet.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Level.cs" />
+    <Compile Include="Merchandise.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
