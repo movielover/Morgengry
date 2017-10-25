@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    public class Merchandise
+    public abstract class Merchandise
     {
-        public Merchandise(string itemId)
-        {
-            ItemId = itemId;
-        }
 
         public string ItemId { get; set; }
+        public override string ToString()
+        {
+            return String.Format("ItemId: {0}", ItemId);
+        }
     }
+    
 }
