@@ -29,7 +29,7 @@ namespace Morgengry
         public static double   GetValueOfCourse(Course course)
         {
             double hours = course.DurationInMinutes / 60.0;
-            return (Math.Ceiling(hours) * 875.00);
+            return (Math.Floor(hours) * 875.00);
         }
     }
 }
