@@ -15,23 +15,25 @@ namespace Morgengry
         }
         public Amulet GetAmulet(string itemId)
         {
-            foreach (Amulet amulet in amulets)
-            {
-               if (amulet.ItemId == itemId)
-                {
-                    return amulet;
-                }
-            }
-            return null;
+            return amulets.Find(a => a.ItemId == itemId) ?? null;
+            //foreach (Amulet amulet in amulets)
+            //{
+            //   if (amulet.ItemId == itemId)
+            //    {
+            //        return amulet;
+            //    }
+            //}
+            //return null;
         }
         public double GetTotalValue()
         {
-            double result = 0;
-            foreach (Amulet amulet in amulets)
-            {
-                result = result + Utility.GetValueOfAmulet(amulet);
-            }
-            return result;
+            return amulets.Sum(a => Utility.GetValueOfAmulet(a));
+            //double result = 0;
+            //foreach (Amulet amulet in amulets)
+            //{
+            //    result = result + Utility.GetValueOfAmulet(amulet);
+            //}
+            //return result;
         }
     }
 

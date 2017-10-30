@@ -15,23 +15,25 @@ namespace Morgengry
         }
         public Course GetCourse(string name)
         {
-            foreach (Course course in courses)
-            {
-                if (course.Name == name)
-                {
-                    return course;
-                }
-            }
-            return null;
+            return courses.Find(c => c.Name == name) ?? null;
+            //foreach (Course course in courses)
+            //{
+            //    if (course.Name == name)
+            //    {
+            //        return course;
+            //    }
+            //}
+            //return null;
         }
         public double GetTotalValue()
         {
-            double result = 0;
-            foreach (Course course in courses)
-            {
-                result = result + Utility.GetValueOfCourse(course);
-            }
-            return result;
+            return courses.Sum(c => Utility.GetValueOfCourse(c));
+            //double result = 0;
+            //foreach (Course course in courses)
+            //{
+            //    result = result + Utility.GetValueOfCourse(course);
+            //}
+            //return result;
         }
         
 

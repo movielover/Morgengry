@@ -17,8 +17,6 @@ namespace Morgengry
             this(name, 0)
         {
         }
-
-
         public string Name { get; set; }
         public int DurationInMinutes { get; set; }
         public override string ToString()

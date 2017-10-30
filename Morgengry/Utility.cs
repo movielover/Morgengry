@@ -26,7 +26,7 @@ namespace Morgengry
                     return 0;
             }
         }
-        public static double   GetValueOfCourse(Course course)
+        public static double GetValueOfCourse(Course course)
         {
             double hours = course.DurationInMinutes / 60.0;
             return (Math.Floor(hours) * 875.00);
