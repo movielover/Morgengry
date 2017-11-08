@@ -5,17 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Morgengry
+{ public class MerchandiseRepository
 {
-    public class MerchandiseRepository
+    private List<Merchandise> merchandise = new List<Merchandise>();
+    public void AddAmulet(Amulet amulet)
     {
-        private List<Amulet> amulets = new List<Amulet>();
-        public void AddAmulet(Amulet amulet)
+        merchandise.Add(amulet);
+    }
+    public void AddBook(Book book)
+    {
+        merchandise.Add(book);
+    }
+    public Amulet GetAmulet(string itemId)
         {
-            amulets.Add(amulet);
-        }
-        public Amulet GetAmulet(string itemId)
-        {
-            foreach (Amulet amulet in amulets)
+            foreach (Amulet amulet in merchandise)
             {
                 if (amulet.ItemId == itemId)
                 {
@@ -24,14 +27,9 @@ namespace Morgengry
             }
             return null;
         }
-        private List<Book> books = new List<Book>();
-        public void AddBook(Book book)
-        {
-            books.Add(book);
-        }
         public Book GetBook(string itemId)
         {
-            foreach (Book book in books)
+            foreach (Book book in merchandise)
             {
                 if (book.ItemId == itemId)
                 {
@@ -43,16 +41,16 @@ namespace Morgengry
         public double GetTotalValue()
         {
             double result = 0;
-            foreach (Amulet amulet in amulets)
+            foreach (Amulet amulet in merchandise)
             {
                 result = result + Utility.GetValueOfAmulet(amulet);
             }
-            foreach (Book book in books)
+            foreach (Book book in merchandise)
             {
                 result = result + Utility.GetValueOfBook(book);
             }
             return result;
         }
-        
-}
-}
+        }
+    }
+
