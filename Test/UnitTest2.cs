@@ -11,8 +11,8 @@ namespace Test
         Amulet a11, a12, a13;
         Course c111, c112;
         CourseRepository courses = new CourseRepository();
-        BookRepository books = new BookRepository();
-        AmuletRepository amulets = new AmuletRepository();
+        MerchandiseRepository books = new MerchandiseRepository();
+        MerchandiseRepository amulets = new MerchandiseRepository();
 
 
         [TestInitialize]
