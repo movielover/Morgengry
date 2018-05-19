@@ -27,13 +27,13 @@ namespace Morgengry
         }
         public double GetTotalValue()
         {
-            return courses.Sum(c => Utility.GetValueOfCourse(c));
-            //double result = 0;
-            //foreach (Course course in courses)
-            //{
-            //    result = result + Utility.GetValueOfCourse(course);
-            //}
-            //return result;
+            //return courses.Sum(c => Utility.GetValueOfCourse(c));
+            double result = 0;
+            foreach (Course course in courses)
+            {
+                result = result + Utility.GetValueOfCourse(course);
+            }
+            return result;
         }
         
 
